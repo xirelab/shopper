@@ -20,7 +20,7 @@ const routes: Routes = [{
   ],
   declarations: [
     HomeComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent    
   ],
   providers: [ 
     ProductsServices, 

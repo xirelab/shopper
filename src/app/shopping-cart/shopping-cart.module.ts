@@ -4,6 +4,7 @@ import { CartComponent } from './container/cart/cart.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { CartServices } from '../services/cart/cart.services';
+import { ItemsPipe } from '../pipes/items.pipe';
 
 const routes: Routes = [{
   path: '',
@@ -17,7 +18,8 @@ const routes: Routes = [{
     RouterModule.forChild(routes)
   ],
   declarations: [
-    CartComponent
+    CartComponent,
+    ItemsPipe
   ],
   providers: [
     // CartServices

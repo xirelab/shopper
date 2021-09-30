@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { ProductsServices } from '../services/products/products.services';
 import { ProductMaintenanceComponent } from './components/product-maintenance/product-maintenance.component';
+import { NumberOnlyDirective } from '../directive/numbers-only.directive';
 
 const routes: Routes = [{
   path: '',
@@ -14,7 +15,8 @@ const routes: Routes = [{
 @NgModule({
   declarations: [
     AdminComponent,
-    ProductMaintenanceComponent
+    ProductMaintenanceComponent,
+    NumberOnlyDirective
   ],
   imports: [
     CommonModule,

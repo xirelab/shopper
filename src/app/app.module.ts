@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { CartServices } from './services/cart/cart.services';
+import { HighlightDirective } from './directive/highlight.directive';
 
 @NgModule({
   imports:      [ 
@@ -18,7 +19,7 @@ import { CartServices } from './services/cart/cart.services';
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),
     SharedModule
   ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, HighlightDirective ],
   providers: [ CartServices ],
   bootstrap:    [ AppComponent ]
 })
