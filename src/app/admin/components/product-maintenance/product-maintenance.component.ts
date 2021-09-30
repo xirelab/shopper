@@ -17,7 +17,11 @@ export class ProductMaintenanceComponent implements OnChanges {
   constructor(private productsServices: ProductsServices) { }
 
   ngOnChanges(changes: SimpleChanges) {
-    
+    if (this.isNewproduct) {
+      this.productId = "";
+      this.productName = "";
+      this.productPrice = "";
+    }
   }
 
   inputId($event: any) {

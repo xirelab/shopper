@@ -1,10 +1,15 @@
+<br/>
 <div *ngIf="product?.id">
 <h2>product-details!</h2>
 <p>product Id: <span [innerText]= "product?.id"></span></p>
 <p>Name: <span [innerText]= "product?.name"></span></p>
 <p>Price $: <span [innerText]= "product?.price"></span></p>
 <br/>
-<button (click)="count = count - 1">-</button> {{count}} <button (click)="count = count + 1">+</button>
+<button class="button-counter" (click)="count = count - 1">-</button> 
+{{count}} 
+<button class="button-counter" (click)="count = count + 1">+</button>
 <br/><br/>
-<button (click)="onClick()">Add to Cart</button>
+<button class="button" style="vertical-align:middle" (click)="onClick()">
+    <span>Add to Cart </span>
+</button>
 </div>

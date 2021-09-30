@@ -1,0 +1,22 @@
+.button-event {
+    display: inline-block;
+    border-radius: 50px;    
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;    
+    margin: 1px;
+  }
+
+  .active {
+    background-color: #4597e4;
+    cursor: pointer;
+  }
+
+  .inactive {
+    background-color: #d9e7f3;
+    cursor: none;
+  }

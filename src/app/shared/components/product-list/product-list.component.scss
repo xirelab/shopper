@@ -1,0 +1,26 @@
+table {
+    margin: 1rem;
+    // th, td {
+    //     align-self: stretch;
+    //     display: initial;
+    // }
+}
+
+.margin05 {
+    margin: 25px;
+}
+
+td {
+    border: 1px rgb(230, 248, 180) solid; 
+    padding: 15px; 
+    cursor: pointer;
+}
+
+tr:hover {
+    background-color: rgb(172, 221, 240);
+}
+
+.selected {
+    background-color: rgb(112, 155, 42);
+    color: #FFF;
+}

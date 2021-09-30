@@ -1,8 +1,14 @@
+<br/>
+<div *ngIf="productId || isNewproduct">
 <p>Maintain selected product!</p>
 <p>Product ID:   <input type="text" [value]="productId" (input)="inputId($event)" /></p> 
 <p>Product name: <input type="text" [value]="productName" (input)="inputName($event)" /></p>
 <p>Price:        <input type="text" [value]="productPrice" (input)="inputPrice($event)" /></p>
 <br/>
-<button [disabled]="!isNewproduct" (click)="addProduct()">Add Product</button>
-<button [disabled]="isNewproduct" (click)="updateProduct()">Update Product</button>
-<button [disabled]="isNewproduct" (click)="removeProduct()">Remove Product</button>
+<button class = "button-event" [ngClass] = "isNewproduct ? 'active' : 'inactive'"
+    [disabled]="!isNewproduct" (click)="addProduct()">Add Product</button>
+<button class = "button-event" [ngClass] = "!isNewproduct ? 'active' : 'inactive'"
+    [disabled]="isNewproduct" (click)="updateProduct()">Update Product</button>
+<button class = "button-event" [ngClass] = "!isNewproduct ? 'active' : 'inactive'"
+    [disabled]="isNewproduct" (click)="removeProduct()">Remove Product</button>
+</div>

@@ -1,2 +1,12 @@
-<app-product-list [products]="products" (selectedProdctId)="onClick($event)"></app-product-list>
-<app-product-details [product]="product"></app-product-details>
+<span>Select Product to see the details</span>
+<div class = "center-align" style="width: 100%;">
+    <div style="float:left; width: 50%">
+        <app-product-list 
+            [products]="products" 
+            (selectedProdctId)="onClick($event)">
+        </app-product-list>
+    </div>
+    <div>
+        <app-product-details [product]="product"></app-product-details>
+    </div>
+</div>

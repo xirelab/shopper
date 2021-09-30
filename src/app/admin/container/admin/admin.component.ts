@@ -31,6 +31,7 @@ export class AdminComponent implements OnInit {
 
   onClick(id: any) {
     console.log("selected product id is " + id);
+    this.isNewproduct = false;
     this.product = this.products?.find(x => x.id == id);
   }
 }

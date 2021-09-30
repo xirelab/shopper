@@ -1,0 +1,9 @@
+td {
+    border: 1px rgb(230, 248, 180) solid; 
+    padding: 15px; 
+    cursor: pointer;
+}
+
+tr:hover {
+    background-color: rgb(172, 221, 240);
+}

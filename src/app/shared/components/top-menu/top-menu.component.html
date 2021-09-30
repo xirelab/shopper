@@ -1,6 +1,8 @@
 <p>
-<button (click)="MenuClicked('home')">Shopping Home</button>
-<button *ngIf="userType=='admin'" (click)="MenuClicked('admin')">Admin only !!</button>
-<button (click)="MenuClicked('cart')">
+<button class="button" style="vertical-align:middle" (click)="MenuClicked('home')">
+    <span>Home</span></button>
+<button class="button" style="vertical-align:middle" *ngIf="userType=='admin'" (click)="MenuClicked('admin')">
+    <span>Admin</span></button>
+<button class="right button" style="vertical-align:middle" (click)="MenuClicked('cart')">
     <span [innerText]="getCart()"></span></button>
 </p>

@@ -1,13 +1,10 @@
-<div>
-    <span> Products</span>
+<div>    
     <table>
         <thead>
-            <th>Id</th>
             <th>Name</th>
         </thead>
         <tbody>
-            <tr (click)="onClick(p.id)" *ngFor="let p of products">
-                <td>{{p.id}}</td>
+            <tr [ngClass]="{'selected': isSelected(p.id)}" (click)="onClick(p.id)" *ngFor="let p of products">
                 <td>{{p.name}}</td>
             </tr>
         </tbody>

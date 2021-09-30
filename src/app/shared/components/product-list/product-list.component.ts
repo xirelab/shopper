@@ -12,8 +12,13 @@ export class ProductListComponent {
   @Input() isAdmin: boolean = false;
   @Output() selectedProdctId: EventEmitter<number> = new EventEmitter<number>();
   
+  selectedId = -1;
   onClick(id: number) {
+    this.selectedId = id;
     this.selectedProdctId.emit(id);
   }
 
+  isSelected(id: number) {
+    return id == this.selectedId;
+  }
 }

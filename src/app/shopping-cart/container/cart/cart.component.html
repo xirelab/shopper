@@ -1,19 +1,19 @@
-<p>
-My cart 
-</p>
+<h2> My cart </h2>
 <div>
     <table>
         <thead>
-            <th>product Id</th>
+            <th>Product</th>
             <th>Quantity</th>
+            <th></th>
         </thead>
         <tbody>
             <tr *ngFor="let c of cart?.items">
                 <td>{{c.name}}</td>
                 <td>{{c.quantity}}</td>
+                <td><button>remove</button></td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<p>TOTAL $: <span [innerText]="cart?.total"> </span> </p>
+<h3>TOTAL $: <span [innerText]="cart?.total"> </span> </h3>

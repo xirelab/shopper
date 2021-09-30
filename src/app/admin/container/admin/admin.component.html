@@ -1,10 +1,20 @@
 <h2>Product Maintenance</h2>
-<br/>
-<app-product-list [products]="products" (selectedProdctId)="onClick($event)"></app-product-list>
-<button (click)="isNewproduct = true">Add New Product</button>
-<app-product-maintenance 
-    [productId]="product?.id?.toString() || ''"
-    [productName]="product?.name?.toString() || ''"
-    [productPrice]="product?.price?.toString() || ''"
-    [isNewproduct]="isNewproduct">
-</app-product-maintenance>
+<div class = "center-align" style="width: 100%;">
+    <div style="float:left; width: 50%">
+        <span>Select product to update/remove..</span>
+        <app-product-list 
+            [products]="products" 
+            (selectedProdctId)="onClick($event)">
+        </app-product-list>
+        <button class="button" style="vertical-align:middle" 
+        (click)="isNewproduct = true">
+        <span>Add New Product</span></button>
+    </div>
+    <div>   
+        <app-product-maintenance 
+            [productId]="product?.id?.toString() || ''"
+            [productName]="product?.name?.toString() || ''"
+            [productPrice]="product?.price?.toString() || ''"
+            [isNewproduct]="isNewproduct">
+        </app-product-maintenance>
+    </div>
