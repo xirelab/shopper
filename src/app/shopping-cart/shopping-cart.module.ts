@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { CartComponent } from './container/cart/cart.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { CartServices } from '../services/cart/cart.services';
 
 const routes: Routes = [{
-  path: 'shopping-cart',
+  path: '',
   component: CartComponent
 }];
 
@@ -17,6 +18,9 @@ const routes: Routes = [{
   ],
   declarations: [
     CartComponent
+  ],
+  providers: [
+    // CartServices
   ]
 })
 export class ShoppingCartModule { }

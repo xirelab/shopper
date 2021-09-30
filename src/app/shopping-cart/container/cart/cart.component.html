@@ -1,3 +1,19 @@
 <p>
-cart works!
+My cart 
 </p>
+<div>
+    <table>
+        <thead>
+            <th>product Id</th>
+            <th>Quantity</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of cart?.items">
+                <td>{{c.name}}</td>
+                <td>{{c.quantity}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>TOTAL $: <span [innerText]="cart?.total"> </span> </p>

@@ -1,30 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './container/home/home.component';
+import { AdminComponent } from './container/admin/admin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { ProductsServices } from '../services/products/products.services';
-import { CartServices } from '../services/cart/cart.services';
-import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ProductMaintenanceComponent } from './components/product-maintenance/product-maintenance.component';
 
 const routes: Routes = [{
   path: '',
-  component: HomeComponent
+  component: AdminComponent
 }];
 
 @NgModule({
+  declarations: [
+    AdminComponent,
+    ProductMaintenanceComponent
+  ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [
-    HomeComponent,
-    ProductDetailsComponent
-  ],
-  providers: [ 
-    ProductsServices, 
-    // CartServices 
+  providers: [
+    ProductsServices
   ]
 })
-export class HomePageModule { }
+export class AdminModule { }

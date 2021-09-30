@@ -14,6 +14,11 @@ export const routes: Routes = [
     path: 'shopping-cart',
     loadChildren: () => import('./shopping-cart/shopping-cart.module').then(m => m.ShoppingCartModule),
     runGuardsAndResolvers: 'always'
+  },
+  { 
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
+    runGuardsAndResolvers: 'always'
   }
 ];
 

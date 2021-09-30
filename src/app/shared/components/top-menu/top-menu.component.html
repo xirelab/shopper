@@ -1,5 +1,6 @@
 <p>
-top-menu works!
-<button (click)="MenuClicked('home')">Home</button>
-<button (click)="MenuClicked('cart')">Cart</button>
+<button (click)="MenuClicked('home')">Shopping Home</button>
+<button *ngIf="userType=='admin'" (click)="MenuClicked('admin')">Admin only !!</button>
+<button (click)="MenuClicked('cart')">
+    <span [innerText]="getCart()"></span></button>
 </p>

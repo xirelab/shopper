@@ -1,0 +1,15 @@
+<div>
+    <span> Products</span>
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+        </thead>
+        <tbody>
+            <tr (click)="onClick(p.id)" *ngFor="let p of products">
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
