@@ -19,7 +19,10 @@ import { HighlightDirective } from './directive/highlight.directive';
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),
     SharedModule
   ],
-  declarations: [ AppComponent, HighlightDirective ],
+  declarations: [ 
+    AppComponent, 
+    // HighlightDirective 
+  ],
   providers: [ CartServices ],
   bootstrap:    [ AppComponent ]
 })

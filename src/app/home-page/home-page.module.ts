@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ProductsServices } from '../services/products/products.services';
 import { CartServices } from '../services/cart/cart.services';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { HighlightDirective } from '../directive/highlight.directive';
 
 const routes: Routes = [{
   path: '',
@@ -20,7 +21,8 @@ const routes: Routes = [{
   ],
   declarations: [
     HomeComponent,
-    ProductDetailsComponent    
+    ProductDetailsComponent,
+    HighlightDirective    
   ],
   providers: [ 
     ProductsServices, 

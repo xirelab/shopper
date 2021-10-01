@@ -11,6 +11,9 @@
 </div>
 <p></p>
 <hr />
-<h2>Mouse over the following lines to see fixed highlights</h2>
-<p [appHighlight]="'yellow'">Highlighted in yellow</p>
-<p appHighlight="orange">Highlighted in orange</p>
+<div>
+  <img [src]="dogs[count]?.url" />
+  <br/><span [innerText]="dogs[count]?.title"></span><br/>
+  <button [disabled]="count < 1" (click)="count = count - 1"><<</button>
+  <button [disabled]="count > 9" (click)="count = count + 1">>></button>
+</div>

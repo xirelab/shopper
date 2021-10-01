@@ -1,9 +1,9 @@
 <br/>
 <div *ngIf="product?.id">
 <h2>product-details!</h2>
-<p>product Id: <span [innerText]= "product?.id"></span></p>
-<p>Name: <span [innerText]= "product?.name"></span></p>
-<p>Price $: <span [innerText]= "product?.price"></span></p>
+<p>product Id: <span appHighlight="orange" [innerText]= "product?.id"></span></p>
+<p>Name: <span [appHighlight]="'yellow'" [innerText]= "product?.name"></span></p>
+<p>Price $: <span appHighlight="orange" [innerText]= "product?.price"></span></p>
 <br/>
 <button class="button-counter" (click)="count = count - 1">-</button> 
 {{count}} 

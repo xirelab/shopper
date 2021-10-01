@@ -4,7 +4,7 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
     selector: '[numberOnly]'
 })
 export class NumberOnlyDirective {
-    // Allow decimal numbers. The \. is only allowed once to occur
+    // Allow decimal numbers including one dot.
     private regex: RegExp = new RegExp(/^[0-9]+(\.[0-9]*){0,1}$/g);
 
     // Allow key codes for special events. Reflect :
